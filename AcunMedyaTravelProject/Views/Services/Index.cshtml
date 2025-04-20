@@ -1,0 +1,43 @@
+﻿@model List<AcunMedyaTravelProject.Entities.Services>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="container">
+    <br /><br />
+    <h2>Hizmetler Listesi</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Başlık</td>
+                <td>Açıklama</td>
+                <td>Resim</td>
+                <td>Güncelle</td>
+                <td>Sil</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ServicesID</td>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                    <td><img src="@item.ImageUrl" style="width:50px;height:50px" /></td>
+                    <td><a href="/Services/UpdateServices/@item.ServicesID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Services/DeleteServices/@item.ServicesID" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <br /><br />
+    <a href="/Serices/AddServices/" class="btn btn-dribbble">Oluştur</a>
+
+</div>
