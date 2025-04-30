@@ -8,6 +8,7 @@ using AcunMedyaTravelProject.Entities;
 
 namespace AcunMedyaTravelProject.Controllers
 {
+        [Authorize]
     public class ServicesController : Controller
     {
         AcunMedyaTravelProject.Context.Context _context = new AcunMedyaTravelProject.Context.Context();
@@ -53,6 +54,11 @@ namespace AcunMedyaTravelProject.Controllers
             value.ImageUrl = model.ImageUrl;
             value.Title = model.Title;
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Test()
+        {
+            return View();
         }
     }
 }

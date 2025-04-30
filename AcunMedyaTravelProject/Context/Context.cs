@@ -14,6 +14,7 @@ namespace AcunMedyaTravelProject.Context
         public DbSet<Destinations> Destinations {get;set;}
         public DbSet<Slider> Sliders {get;set;}
         public DbSet<Services> Services {get;set;}
+        public DbSet<Admin> Admins {get;set;}
 
     }
 }

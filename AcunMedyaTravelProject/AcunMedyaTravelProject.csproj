@@ -129,8 +129,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\Context.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ErrorPagesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Destinations.cs" />
     <Compile Include="Entities\Services.cs" />
@@ -150,6 +155,14 @@
     <Compile Include="Migrations\202504091813595_deneme.cs" />
     <Compile Include="Migrations\202504091813595_deneme.designer.cs">
       <DependentUpon>202504091813595_deneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504201740482_migAdmin.cs" />
+    <Compile Include="Migrations\202504201740482_migAdmin.designer.cs">
+      <DependentUpon>202504201740482_migAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504301815440_mig_diagram.cs" />
+    <Compile Include="Migrations\202504301815440_mig_diagram.designer.cs">
+      <DependentUpon>202504301815440_mig_diagram.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1015,11 +1028,16 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AdminLayout\Index.cshtml" />
-    <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\AdminLayout\PartialHead.cshtml" />
     <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
     <Content Include="Views\AdminLayout\PartialSideBar.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\ErrorPages\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialTurlar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1047,6 +1065,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504091813595_deneme.resx">
       <DependentUpon>202504091813595_deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504201740482_migAdmin.resx">
+      <DependentUpon>202504201740482_migAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504301815440_mig_diagram.resx">
+      <DependentUpon>202504301815440_mig_diagram.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
