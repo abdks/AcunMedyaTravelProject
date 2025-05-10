@@ -60,5 +60,17 @@ namespace AcunMedyaTravelProject.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult SearchServices(string searchText)
+        {
+            //Sütün_adı LIKE '%searchText%'
+            var result = string.IsNullOrEmpty(searchText) ? new List<Services>() : _context.Services.Where(x=>x.Title.Contains(searchText) || x.Description.Contains(searchText)).ToList();
+
+            return View(result);
+        }
+
+
+
     }
 }
